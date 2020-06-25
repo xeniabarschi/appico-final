@@ -1,0 +1,279 @@
+/*comon styles*/
+body{
+    
+    padding: 100vh 0;
+
+    font-family: Arial;
+    font-size: 18px;
+}
+
+section{
+    
+    padding: 5em 0;
+}
+header{
+    padding-bottom: 2em;
+}
+
+header h1{
+    font-size: 1.62em;
+    font-weight: 900;
+    padding: 0.5em 0;
+
+}
+header p{
+    color: #777;
+}
+img{
+    width: 100%;
+}
+.row-3>*{
+    display: inline-block;
+    width: 33%;
+    vertical-align: top;
+}
+.text-center{
+    text-align: center;
+    
+}
+.text-right{
+    text-align: right;
+}
+.text-left{
+    text-align: left;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+@media (max-width: 1220px){
+    .container{
+        width: 800px;
+    }
+}
+
+/*features specific styles*/
+.features figure {
+    animation: floating 3s infinite;
+}
+.features img{
+    transform-origin: top;
+    transform: scale(0.75);
+}
+.features h2{
+    font-size: 1.1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 1em 1.9em;
+    position: relative;
+}
+.features p{
+    color: #777;
+}
+.features i{
+    position: absolute;
+    }
+
+.features .right-icon i{
+    bottom: -0.5em;
+    left: 22.5em;
+    width: 1.5em;
+    
+    
+}
+.features .left-icon i{
+    bottom: -0.5em;
+    right: 22.5em;
+    width: 1em;
+    
+    
+}
+.features li:hover i{
+    background-color: #DDD;
+}
+.features p{
+    line-height: 1.2em;
+    padding: 1em 1.5em;
+}
+.features ul p{
+    border: 1px solid #DDD;
+    transition: 0.5s;
+}
+.features .text-right p{
+    border-right: 0;
+    position: relative;
+}
+.features .text-right p::after{
+    content: "";
+    background-color: white;
+    height: 1em;
+    width: 100%;
+    display: block;
+    position: absolute;
+    bottom: -0.5em;
+    right: 0;
+}
+.features .text-right li:hover p::after{
+    width: 50%;
+    transition: 0.7s;
+}
+
+.features .text-left p{
+    border-left: 0;
+    position: relative;
+}
+.features .text-left p::after{
+    content: "";
+    background-color: white;
+    height: 1em;
+    width: 100%;
+    display: block;
+    position: absolute;
+    bottom: -0.5em;
+    left: 0;
+}
+.features .text-left li:hover p::after{
+    width: 50%;
+    transition: 0.7s;
+}
+.features ul li:hover p{
+    border-color: #777;
+}
+
+
+
+
+/*features adaptive style*/
+@media (max-width: 1220px){
+    .features .row-3>*{
+        width: 45%;
+
+    }
+    .features figure{
+        display: none;
+    }
+    .features h2{
+        padding: 1em 3em;
+    }
+    .features p{
+        padding: 1em 2.5em;
+    }
+}
+@media (max-width: 900px){
+    .features .row-3>*{
+         width: 60%;
+         padding-left: 10%;
+    }
+    .features figure{
+        display: none;
+    }
+    .features h2{
+        text-align: left;
+    }
+    .features p{
+        text-align: left;
+        
+    }
+    .features .left-icon i,
+    .features .right-icon i{
+        top: 2.5em;
+        left: -1em;
+    }
+    .features ul p{
+        border: 1px solid white;
+        transition: 0.5s;
+    }
+    .features .text-right p{
+        border-right: 1px solid white;
+        border-left: 0;
+    }
+    .features .text-right p::after{
+        content: "";
+        background-color: white;
+        height: 1em;
+        width: 100%;
+        display: block;
+        position: absolute;
+        bottom: -0.5em;
+        left: 0;
+    }
+}
+@keyframes floating{
+    0%{ transform: translateY(-1em)}
+    50%{ transform: translateY(1em);}
+    100%{ transform: translateY(-1em);}
+} 
+
+
+
+/*video*/
+.video{
+    padding: 10em 0;
+    background-image: linear-gradient(rgba(10, 10, 99, 0.514), rgba(38, 38, 211, 0.699)), 
+    url(img/video-bg.jpg);
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+    background-position: center;
+    text-align: center;
+    
+}
+.video button{
+    height: 5em;
+    width: 5em;
+    border-radius: 100%;
+    outline: none;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+}
+.video button:hover{
+    background-color: blue;
+}
+.video button .wave:last-child{
+    background-color: white;
+    width: 5em;
+    height: 5em;
+    display: block;
+    position: absolute;
+
+    border-radius: 100%;
+    top: 0;
+    left: 0;
+                              
+    animation: wavefadeOut 5s infinite;
+}
+.video button .wave:nth-child(2){
+    background-color: white;
+    width: 5em;
+    height: 5em;
+    display: block;
+    position: absolute;
+
+    border-radius: 100%;
+    top: 0;
+    left: 0;
+                              
+    animation: wavefadeOut 5s infinite;
+    animation-delay: 1s;
+
+}
+.video button .wave:first-child{
+    background-color: white;
+    width: 5em;
+    height: 5em;
+    display: block;
+    position: absolute;
+
+    border-radius: 100%;
+    top: 0;
+    left: 0;
+                              
+    animation: wavefadeOut 5s infinite;
+    animation-delay: 2s;
+}
+
+@keyframes wavefadeOut{
+    0%{transform: scale(1); opacity: 0.7;}
+    100%{transform: scale(3); opacity: 0;}
+}
